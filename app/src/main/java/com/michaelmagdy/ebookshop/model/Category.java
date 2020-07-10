@@ -2,6 +2,7 @@ package com.michaelmagdy.ebookshop.model;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "categories_table")
@@ -16,6 +17,7 @@ public class Category {
     @ColumnInfo(name = "category_description")
     private String categoryDescription;
 
+    @Ignore
     public Category() {
     }
 

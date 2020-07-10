@@ -9,7 +9,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-@Database(entities = {Category.class,Book.class},version = 1)
+@Database(entities = {Category.class,Book.class},version = 1, exportSchema = false)
 public abstract class BooksDatabase extends RoomDatabase {
 
     public abstract CategoryDAO categoryDAO();

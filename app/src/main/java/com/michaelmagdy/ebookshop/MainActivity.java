@@ -11,6 +11,8 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,4 +54,29 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public class MainActivityClickHandlers {
+
+        public void onFABClicked(View view) {
+
+            Toast.makeText(getApplicationContext()," FAB Clicked",Toast.LENGTH_LONG).show();
+//            Intent intent = new Intent(MainActivity.this, AddAndEditActivity.class);
+//            startActivityForResult(intent, ADD_BOOK_REQUEST_CODE);
+
+
+        }
+
+        public void onSelectItem(AdapterView<?> parent, View view, int pos, long id) {
+
+            Toast.makeText(getApplicationContext()," Item Selected",Toast.LENGTH_LONG).show();
+
+//            selectedCategory = (Category) parent.getItemAtPosition(pos);
+//
+//            String message = " id is " + selectedCategory.getId() + "\n name is " + selectedCategory.getCategoryName() + "\n email is " + selectedCategory.getCategoryDescription();
+//
+//            loadBooksArrayList(selectedCategory.getId());
+        }
+
+    }
+
 }

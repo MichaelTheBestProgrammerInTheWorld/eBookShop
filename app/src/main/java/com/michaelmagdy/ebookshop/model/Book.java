@@ -3,6 +3,7 @@ package com.michaelmagdy.ebookshop.model;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import java.util.Objects;
@@ -26,6 +27,7 @@ public class Book {
     @ColumnInfo(name="category_id")
     private int categoryId;
 
+    @Ignore
     public Book() {
     }
 
